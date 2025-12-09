@@ -3,62 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Vital Edge Insurance | Marketplace Help</title>
 
-  <!-- Open Graph for WhatsApp / Messenger Preview -->
-  <meta property="og:title" content="Vital Edge Insurance — ACA Marketplace Help">
+  <!-- Optional: update BASE_URL to your real GitHub Pages URL if you want perfect previews -->
+  <!-- <meta property="og:title" content="Vital Edge Insurance — ACA Marketplace Help">
   <meta property="og:description" content="Chat or text with Patrick to check Marketplace eligibility for 2026.">
-  <meta property="og:image" content="https://pmackiniv.github.io/vital-edge-funnel/patrick-mackin-headshot.png">
-  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://YOUR_GITHUB_PAGES_URL/patrick-mackin-headshot.png">
+  <meta property="og:type" content="website"> -->
 
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <main class="page">
 
-  <!-- Top Card -->
-  <div class="card">
-    <img src="patrick-mackin-headshot.png" class="headshot" alt="Patrick Mackin IV">
-    <img src="logo.png" class="logo" alt="Vital Edge Insurance">
+    <!-- Top card -->
+    <section class="card">
+      <img src="patrick-mackin-headshot.png" class="headshot" alt="Patrick Mackin IV">
+      <img src="logo.png" class="logo" alt="Vital Edge Insurance logo">
 
-    <h2>Patrick Mackin IV — Licensed Enrollment Specialist</h2>
+      <h1>Patrick Mackin IV — Licensed Enrollment Specialist</h1>
 
-    <!-- CTA Buttons -->
-    <button class="btn" onclick="checkConsent(event)">Chat with me</button>
-    <button class="btn" onclick="checkConsent(event)">Text / SMS</button>
-    <button class="btn whatsapp" onclick="checkConsent(event)">WhatsApp</button>
-    <button class="btn" onclick="checkConsent(event)">Facebook Messenger</button>
-    <button class="btn call-btn" onclick="checkConsent(event)">Call Me</button>
-  </div>
+      <button class="btn" onclick="onContactClick(event, 'chat')">Chat with me</button>
+      <button class="btn" onclick="onContactClick(event, 'sms')">Text / SMS</button>
+      <button class="btn btn-whatsapp" onclick="onContactClick(event, 'whatsapp')">WhatsApp</button>
+      <button class="btn" onclick="onContactClick(event, 'messenger')">Facebook Messenger</button>
+      <button class="btn btn-call" onclick="onContactClick(event, 'call')">Call Me</button>
+    </section>
 
-  <!-- Mid section -->
-  <div class="info">
-    <h3>Need Marketplace Coverage?</h3>
-    <p>Chat or text with me live to explore Marketplace health-insurance options for 2026 and check eligibility instantly.</p>
-  </div>
+    <!-- Mid section -->
+    <section class="info">
+      <h2>Need Marketplace Coverage?</h2>
+      <p>
+        Chat or text with me live to explore Marketplace health-insurance options for 2026
+        and check eligibility instantly.
+      </p>
+    </section>
 
-  <!-- Disclaimer + Consent -->
-  <div class="disclaimer">
-    <p><strong>Marketplace Disclaimer:</strong>  
-      We do not offer every plan available in your area. Any information we provide is limited to the plans we do offer in your area.  
-      Please visit HealthCare.gov for more information.
-    </p>
+    <!-- Disclaimer + consent -->
+    <section class="compliance">
+      <p>
+        <strong>Marketplace Disclaimer:</strong>
+        We do not offer every plan available in your area. Any information we provide is
+        limited to the plans we do offer in your area. Please visit HealthCare.gov for more information.
+      </p>
 
-    <p>Vital Edge Insurance is not affiliated with or endorsed by the U.S. government or the federal Health Insurance Marketplace.</p>
+      <p>
+        Vital Edge Insurance is not affiliated with or endorsed by the U.S. government
+        or the federal Health Insurance Marketplace.
+      </p>
 
-    <label class="consent">
-      <input type="checkbox" id="consent-checkbox">
-      I confirm that I authorize Vital Edge Insurance to contact me regarding Marketplace insurance options.  
-      I understand consent is voluntary and may be revoked at any time.
-    </label>
+      <label class="consent-row">
+        <input type="checkbox" id="consent-checkbox">
+        <span>
+          I confirm that I authorize Vital Edge Insurance to contact me regarding Marketplace
+          insurance options. I understand consent is voluntary and may be revoked at any time.
+        </span>
+      </label>
 
-    <button id="eligibility-btn" onclick="goToEligibility()">Check Eligibility Instantly</button>
+      <button id="eligibility-btn" class="eligibility-btn" onclick="onEligibilityClick(event)">
+        Check Eligibility Instantly
+      </button>
 
-    <p class="footer-note">
-      By providing your information, you authorize Vital Edge Insurance and its agents to contact you regarding Marketplace insurance options. Consent is voluntary and may be revoked at any time.
-    </p>
-  </div>
+      <p class="footer-note">
+        By providing your information, you authorize Vital Edge Insurance and its agents to contact you
+        regarding Marketplace insurance options. Consent is voluntary and may be revoked at any time.
+      </p>
+    </section>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
