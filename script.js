@@ -1,3 +1,5 @@
+// script.js
+
 const HEALTHSHERPA_URL = "https://www.healthsherpa.com/?_agent_id=patrick-mackin-iv";
 
 function hasConsent() {
@@ -5,25 +7,29 @@ function hasConsent() {
   return box && box.checked;
 }
 
-// Consent-gated handler for contact links
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".contact-link");
-  links.forEach(link => {
+  // Consent gating for contact links
+  const contactLinks = document.querySelectorAll(".contact-link");
+  contactLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       if (!hasConsent()) {
         e.preventDefault();
         alert("Please confirm your consent before continuing.");
       }
-      // If consent is checked, allow the default link behavior (mailto, sms, tel, https)
+      // If consent is checked, allow the browser to handle the link naturally
     });
   });
-});
 
-function onEligibilityClick(event) {
-  if (!hasConsent()) {
-    event.preventDefault();
-    alert("Please confirm your consent before continuing.");
-    return;
+  // Eligibility button
+  const eligibilityBtn = document.getElementById("eligibility-btn");
+  if (eligibilityBtn) {
+    eligibilityBtn.addEventListener("click", (e) => {
+      if (!hasConsent()) {
+        e.preventDefault();
+        alert("Please confirm your consent before continuing.");
+        return;
+      }
+      window.location.href = HEALTHSHERPA_URL;
+    });
   }
-  window.location.href = HEALTHSHERPA_URL;
-}
+});
