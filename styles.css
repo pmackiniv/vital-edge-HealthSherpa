@@ -1,3 +1,4 @@
+/* styles.css */
 /* Base font for entire page */
 body {
   font-family: "Times New Roman", Times, serif;
@@ -46,7 +47,7 @@ button, a, input, select, textarea {
   margin: 4px 0 18px;
 }
 
-/* Buttons */
+/* Buttons (anchor-styled) */
 .btn {
   display: block;
   width: 100%;
@@ -57,6 +58,8 @@ button, a, input, select, textarea {
   border-radius: 6px;
   color: #fff;
   background-color: #2d5ac1;
+  text-decoration: none;
+  text-align: center;
   cursor: pointer;
 }
 
