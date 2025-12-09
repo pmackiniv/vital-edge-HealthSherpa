@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vital Edge Insurance | Marketplace Help</title>
+
+  <!-- Open Graph for WhatsApp / Messenger Preview -->
+  <meta property="og:title" content="Vital Edge Insurance — ACA Marketplace Help">
+  <meta property="og:description" content="Chat or text with Patrick to check Marketplace eligibility for 2026.">
+  <meta property="og:image" content="https://pmackiniv.github.io/vital-edge-funnel/patrick-mackin-headshot.png">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Top Card -->
+  <div class="card">
+    <img src="patrick-mackin-headshot.png" class="headshot" alt="Patrick Mackin IV">
+    <img src="logo.png" class="logo" alt="Vital Edge Insurance">
+
+    <h2>Patrick Mackin IV — Licensed Enrollment Specialist</h2>
+
+    <!-- CTA Buttons -->
+    <button class="btn" onclick="checkConsent(event)">Chat with me</button>
+    <button class="btn" onclick="checkConsent(event)">Text / SMS</button>
+    <button class="btn whatsapp" onclick="checkConsent(event)">WhatsApp</button>
+    <button class="btn" onclick="checkConsent(event)">Facebook Messenger</button>
+    <button class="btn call-btn" onclick="checkConsent(event)">Call Me</button>
+  </div>
+
+  <!-- Mid section -->
+  <div class="info">
+    <h3>Need Marketplace Coverage?</h3>
+    <p>Chat or text with me live to explore Marketplace health-insurance options for 2026 and check eligibility instantly.</p>
+  </div>
+
+  <!-- Disclaimer + Consent -->
+  <div class="disclaimer">
+    <p><strong>Marketplace Disclaimer:</strong>  
+      We do not offer every plan available in your area. Any information we provide is limited to the plans we do offer in your area.  
+      Please visit HealthCare.gov for more information.
+    </p>
+
+    <p>Vital Edge Insurance is not affiliated with or endorsed by the U.S. government or the federal Health Insurance Marketplace.</p>
+
+    <label class="consent">
+      <input type="checkbox" id="consent-checkbox">
+      I confirm that I authorize Vital Edge Insurance to contact me regarding Marketplace insurance options.  
+      I understand consent is voluntary and may be revoked at any time.
+    </label>
+
+    <button id="eligibility-btn" onclick="checkConsent(event)">Check Eligibility Instantly</button>
+
+    <p class="footer-note">
+      By providing your information, you authorize Vital Edge Insurance and its agents to contact you regarding Marketplace insurance options. Consent is voluntary and may be revoked at any time.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
